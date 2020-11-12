@@ -5,7 +5,7 @@ I usually write a lot of notes about python basics and logical paths , but it's 
 
 Olá! Estou aprendendo Python 3 e colocarei todas as aulas e desafios neste repositório.
 Fique a vontade para usar meus códigos e/ou alterar o que quiser.
-Escrevo diversos comentários, principalmente com fundamentos de Python e resoluções de exercícios.
+Escrevo diversos comentários sobre fundamentos de Python e resoluções de exercícios.
 
 **Special Thanks**
 
