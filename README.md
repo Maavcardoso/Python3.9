@@ -1,11 +1,11 @@
 # Python3.9
 Hi there! I'm learning coding with Python 3 and i will store all my lessons and challenges in this repository. 
 Feel free to use my codes and/or change anything you want.
-I usually write a lot of notes about python basics and personal thougths , but it's only available in Portuguese for now.
+I usually write a lot of notes about python basics, exercises resolutions and personal thougths , but it's only available in Portuguese for now.
 
 Olá! Estou aprendendo Python 3 e colocarei todas as aulas e desafios neste repositório.
 Fique a vontade para usar meus códigos e/ou alterar o que quiser.
-Escrevo diversos comentários sobre fundamentos de Python e resoluções de exercícios.
+Escrevo diversos comentários sobre fundamentos de Python, resoluções de exercícios e notas pessoais.
 
 **Special Thanks**
 
