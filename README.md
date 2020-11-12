@@ -10,7 +10,7 @@ Escrevo diversos comentários, principalmente com fundamentos de Python e resolu
 
 **Special Thanks**
 
-For Gustavo Guanabara, thanks for him i'm learning python with a high quality class and for free. 
+For Gustavo Guanabara, thanks for him i'm learning python with a high quality class for free. 
 Link to his channel (In Portuguese): https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ
 
 For Python Brasil's community, their wiki is extremely helpful and the exercises are challenging.
