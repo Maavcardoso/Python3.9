@@ -2,7 +2,6 @@
 Hi there! I'm learning coding with Python 3 and i will store all my lessons and challenges in this repository. 
 Feel free to use my codes and/or change anything you want.
 I usually write a lot of notes about python basics and logical paths , but it's only available in Portuguese for now.
-Happy coding! :)
 
 Olá! Estou aprendendo Phyton 3 e colocarei todas as aulas e desafios neste repositório.
 Fique a vontade para usar meus códigos e/ou alterar o que quiser.
@@ -17,3 +16,5 @@ For Python Brasil's community, their wiki is extremely helpful and the exercises
 Link: https://wiki.python.org.br/
 
 And for all my programmer friends. You guys are awesome! Your knowlogy and friendship are important to me.
+
+Happy coding! :)
