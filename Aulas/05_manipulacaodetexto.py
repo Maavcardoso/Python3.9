@@ -55,8 +55,80 @@ print (frase[6:])
 # caracter inicial. Sendo assim, o programa irá printar a partir da unidade
 # indicada até o fim).
 
+# EX 6:
 
+print(frase[6::2])
 
+# output: 'Wrd' ( Aqui indicamos o início do fatiamento e 
+# para pular dois caracteres até o final da string)
+
+# Análise
+# Os recursos de análise permitem que possamos coletar dados de uma string, 
+# como por exemplo, qual o primeiro caractere, o tipo, comprimento, etc.
+# Segue o exemplo de algumas análises:
+
+# EX 7:
+
+print('\n7--', len(frase))
+
+# output: '11' (Demonstra o comprimento da string, ou seja, quantos caracteres a compõem).
+
+# EX 8:
+
+print('\n8--', frase.count('l'))
+print('\n8_2--', frase.count('l',6,12))
+
+# output: '3' e '1' ( Conta quantas vezes o termo ou caractere desejado aparece na string.
+# O segundo exemplo contém um fatiamento específico para o 'World', portanto, contará apenas um 'l').
+
+# EX 9:
+
+print('\n9--', frase.find('Wor'))
+print('\n9_2--', frase.find('Olá'))
+
+# output: '6' e '-1' ( Procura o termo na string e indica a posição de onde se inicia.
+# No segundo exemplo, como 'Olá' não existe nessa string, a função irá retornar -1, que
+# significa que a string citada para busca não se encontra dentro da string frase.)
+
+# EX 10: 
+
+print('\n10--', 'Hello' in frase)
+print('\n10_2--', 'Olá' in frase)
+
+# output: 'True' e 'False' ( Nesse caso, in é um operador, não uma função, que irá identificar
+# se a string desejada está dentro da string frase. Ele retornará um valor booleano, portanto,
+# apesar de ser um operador, ele pode ser usado como método de análise).
+
+# Transformação
+# Uma lista de string é imutável, ou seja, não se altera os dados dela diretamente,
+# mas .
+
+# EX 11:
+
+print('\n11--', frase.replace('World','Mundo'))
+
+# output: 'Hello Mundo' ( Substitui um termo da string por outra a escolha)
+
+# EX 12:
+
+print('\n12_01--',frase.upper()) # Deixa a string em maiusculo.
+print('\n12_02--',frase.lower()) # Deixa a string em minusculo.
+print('\n12_03--',frase.capitalize()) # Deixa a primeira letra em maiusculo e o resto em minusculo.
+print('\n12_04--',frase.title()) # Deixa a primeira letra de cada palavra em maiusculo.
+
+# EX 13:
+
+frase = str('   Hello World   ')
+
+print ('\n13--', frase.strip())
+print ('\n13_02--', frase.rstrip())
+
+# Output: 'Hello World' e '   Hello World' (A função .strip retira os espaços 'inuteis', como no caso dessa string.
+# O segundo código retira apenas espaços 'inuteis' no fim da string).
+
+# EX 14: 
+
+frase = str('Hello World')
 
 
 
