@@ -81,12 +81,16 @@ print('\n8_2--', frase.count('l',6,12))
 # output: '3' e '1' ( Conta quantas vezes o termo ou caractere desejado aparece na string.
 # O segundo exemplo contém um fatiamento específico para o 'World', portanto, contará apenas um 'l').
 
+# Como dito na aula 1, toda string é um objeto, portanto, .count é um módulo 
+
 # EX 9:
 
 print('\n9--', frase.find('Wor'))
 print('\n9_2--', frase.find('Olá'))
+print('\n9_3--', frase.rfind('l'))
 
-# output: '6' e '-1' ( Procura o termo na string e indica a posição de onde se inicia.
+# output: '6', '-1' e '9' ( .find() Procura o termo na string e indica a posição da primeira ocorrência.
+# Já o .rfind() procura o termo e indica a posição da última ocorrência.
 # No segundo exemplo, como 'Olá' não existe nessa string, a função irá retornar -1, que
 # significa que a string citada para busca não se encontra dentro da string frase.)
 
@@ -120,15 +124,34 @@ print('\n12_04--',frase.title()) # Deixa a primeira letra de cada palavra em mai
 
 frase = str('   Hello World   ')
 
-print ('\n13--', frase.strip())
-print ('\n13_02--', frase.rstrip())
-
+print ('\n13--', frase.strip(), '.')
+print ('\n13_02--', frase.rstrip(), '.')
+print('\n13_03--', frase.lstrip(), '.')
 # Output: 'Hello World' e '   Hello World' (A função .strip retira os espaços 'inuteis', como no caso dessa string.
 # O segundo código retira apenas espaços 'inuteis' no fim da string).
+
+
+# Divisão
+# Podemos dividir uma string conforme um parâmetro. Segue o exemplo:
 
 # EX 14: 
 
 frase = str('Hello World')
+txt = frase.split()
+print ('\n14--', txt)
+# output: "Hello", "World". Dividimos duas palavras da string original em
+# uma lista com dois elementos: Hello e World. O parametro para divisão padrão
+# o " ", mas podemos designar o simbolo que for necessário.
+
+# Junção
+# Assim como podemos dividir, também podemos concatenar uma lista em string. 
+
+print('\n15--','---'.join(txt))
+print('\n15_02--', " ".join(txt))
+
+# Output: "Hello---World e Hello World". Usando a mesma variável que havia criado a lista
+# das palavras na string e juntamos as duas partes em uma string novamente. Perceba que
+# o usuário pode escolher a junção desejada das unidades da lista.
 
 
 
