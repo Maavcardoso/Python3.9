@@ -17,7 +17,7 @@ frase = str('Hello World')
 
 # EX 1:
 
-print (frase[4])
+print ('\1--', frase[4])
 
 # output: 'o' ( Na posição 4 da string se encontra o 'o' do 'Hello')
 
