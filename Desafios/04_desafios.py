@@ -66,3 +66,14 @@ uroc = frase.rfind(charf)+1
 print(f'\nA primeira ocorrência da letra {charf} é na posição {proc}')
 print(f'\nA ultima ocorrência da letra {charf} é na posição {uroc}')
 
+# Crie um programa que leia um nome e de o primeiro
+# e o ultimo nome da pessoa.
+
+frase = str(input('\nDigite seu Nome: '))
+frase = frase.strip()
+frase = frase.split()
+prino = frase[0]
+ultno = frase[-1]
+print(f'\nO primeiro nome é: {prino}')
+print(f'\nO último nome é: {ultno}\n')
+
