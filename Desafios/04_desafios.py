@@ -5,7 +5,7 @@
 # -Conte quantas letras tem o primeiro nome.
 
 print('\nExercício 1')
-frase = input('\nDigite seu nome completo: ')
+frase = input('\nDigite seu nome completo: ').strip()
 txt = frase.split()
 prnome = txt [0]
 cprnome = len(txt[0])
@@ -29,7 +29,7 @@ print(f'\nO número digitado foi {x}')
 print(f'\nUnidade: {u}')
 print(f'\nDezena: {d}')
 print(f'\nCentena: {c}')
-print(f'\nMilhar: {m}')
+print(f'\nMilhar: {m}\n')
 
 # Essa eu precisei pesquisar. Planejava criar um contador com if-else, mas essa solução é bem
 # mais simples e elegante, já que é apenas necessário que se divida a casa decimal por inteiro e
@@ -39,14 +39,14 @@ print(f'\nMilhar: {m}')
 
 print('\nExercício 3')
 x = input('\nDigite o nome da sua cidade: ')
-x.strip()
+x = x.strip()
 y = x.split()
 z = 'Santo' in y[0]
 
 if z == True:
-    print(f'\n{x} começa com Santo!')
+    print(f'\n{x} começa com Santo!\n')
 else:
-    print(f'\n{x} não começa com Santo...')
+    print(f'\n{x} não começa com Santo...\n')
 
 # Crie um programa que leia uma frase e:
 # Conte quantos caracteres procurados existem;
@@ -64,16 +64,12 @@ frase = ''.join(frase)
 proc = frase.find(charf)+1
 uroc = frase.rfind(charf)+1
 print(f'\nA primeira ocorrência da letra {charf} é na posição {proc}')
-print(f'\nA ultima ocorrência da letra {charf} é na posição {uroc}')
+print(f'\nA ultima ocorrência da letra {charf} é na posição {uroc}\n')
 
 # Crie um programa que leia um nome e de o primeiro
 # e o ultimo nome da pessoa.
 
-frase = str(input('\nDigite seu Nome: '))
-frase = frase.strip()
+frase = str(input('\nDigite seu nome completo ')).strip()
 frase = frase.split()
-prino = frase[0]
-ultno = frase[-1]
-print(f'\nO primeiro nome é: {prino}')
-print(f'\nO último nome é: {ultno}\n')
-
+print(f'\nO primeiro nome é: {frase[0]}')
+print(f'\nO último nome é: {frase[-1]}\n')
