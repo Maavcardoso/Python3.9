@@ -70,12 +70,82 @@ print('\n','-=-' * 10)
 print('\n','-=-' * 10) 
 print('\n Exercício 5\n')
 
-x = int(input('Digite um ano: '))
-if x % 4 == 0:                         
+from datetime import date
+x = int(input('Digite um ano ou digite 0 para utilizar o ano atual:  '))
+if x == 0:
+    x = date.today().year
+if x % 4 == 0:
     if x % 100 == 0 and x % 400 != 0:
-        print('Não é bissexto')
+        print(f'\n{x} Não é bissexto')
     else:
-        print('é bissexto')
+        print(f'\n{x} é bissexto')
 else:
-    print('Não é bissexto')
-        
+    print(f'\n{x} Não é bissexto')
+
+# Faça um programa que leia 3 números e diga qual deles é o maior e o menor.
+
+print('\n','-=-' * 10) 
+print('\n Exercício 6\n')
+
+x = float(input('Digite o primeiro número: '))
+y = float(input('\nDigite o segundo número: '))
+z = float(input('\nDigite o terceiro número: '))
+
+if x < y and x < z:
+    menor = x
+elif y < x and y < z:
+    menor = y
+elif z < x and z < y:
+    menor = z
+print (f'znO menor número é {menor}')
+
+if x > y and x > z:
+    maior = x
+elif y > x and y > z:
+    maior = y
+elif z > x and z > y:
+    maior = z
+print(f'znO maior número é {maior}')
+
+# Faça um programa que realize um ajuste salarial de acordo com o salário do usuário. 
+# Se ele ganhar mais que 1250 R$, acrescentar 10%. Se igual ou menos, acrescentar 15%.
+
+print('\n','-=-' * 10) 
+print('\n Exercício 7\n')
+
+x = float(input('Digite seu salário: '))
+
+if x > 1250:
+    y = x*1.1
+    print (f'Com o reajuste de 10%, seu novo salário será {y:0.2f}, {y-x:0.2f}R$ a mais.')
+else:
+    y = x*1.15
+    print(f'Com o reajuste de 15%, seu novo salário será {y:0.2f}, {y-x:0.2f}R$ a mais.')
+
+
+#Faça um programa que analise a existencia de um triangulo. (1.0) 
+# * Para um triangulo existir, o maior lado deve ser menor que a soma dos outros dois lados.
+# EX: a = 10, b = 5, c = 6. Seria possivel ter um triangulo, pois a < b + c.
+
+print('\n','-=-' * 10) 
+print('\n Exercício 8\n')
+
+x = float(input('Digite o comprimento do primeiro lado: '))
+y = float(input('\nDigite o comprimento do segundo lado: '))
+z = float(input('\nDigite o comprimento do terceiro lado: '))
+
+if x > y and x > z:
+    if x < y + z:
+        print(f'\nÉ possível existir um triângulo., pois {x} < {y+z}')
+    else:
+        print(f'\nNão é possível existir um triângulo, pois {x} = > {y+z}')
+if y > x and y > z:
+    if y < x + z:
+        print(f'\nÉ possível existir um triângulo, pois {y} < {x+z}')
+    else:
+        print(f'\nNão é possível existir um triângulo, pois {y} = > {x+z}')
+if z > y and z > x:
+    if z < x + y:
+        print(f'\nÉ possível existir um triângulo, pois {z} < {x+y}')
+    else:
+        print(f'\nNão é possível existir um triângulo, pois {z} = > {x+y}')
