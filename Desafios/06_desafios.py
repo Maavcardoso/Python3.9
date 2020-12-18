@@ -89,7 +89,53 @@ elif x == 25:
 else:
     print('\nO Atleta pertence a categoria Master')
 
+# Existência de triangulos 2.0
+# Além de falar se é possível criar um triangulo, também crie condições que analisem se:
+# O triangulo é Escaleno, Equilátero ou Isósceles. 
 
+print('\n','-=-' * 10) 
+print('\n Exercício 6\n')
+
+x = float(input('Digite o comprimento do primeiro lado: '))
+y = float(input('\nDigite o comprimento do segundo lado: '))
+z = float(input('\nDigite o comprimento do terceiro lado: '))
+
+if x < y + z and y < x + z and z < x + y: # identifica se é possivel existir o triangulo
+    if x == y != z or x == z != y or y == z != x: # identifica o tipo de triangulo
+        print('\nEste é um triângulo ISÓSCELES, pois dois lados são iguais.\n')
+    elif x == y and y == z:
+        print('\nEste é um triângulo EQUILÁTERO, pois todos os lados são iguais.\n')
+    else:
+        print('\nEste é um triângulo ESCALENO, pois todos os lados são diferentes.\n')
+else:
+    print('\nNão é possivel existir um triângulo.\n')
+    exit()
+
+# Escreva um programa que leia a altura e o peso de uma pessoa, calcule seu IMC e mostre seu
+# status de acordo com a tabela abaixo:
+# abaixo de 18.5 - abaixo do peso
+# entre 18.5 e 25 - peso ideal
+# 25 até 30 - sobrepeso
+# 30 até 40 - obesidade
+# acime de 40 - obesidade mórbida
+
+print('\n','-=-' * 10) 
+print('\n Exercício 7\n')
+
+peso = float(input('Digite seu peso (em KG): '))
+altura = float(input('Digite sua altura (em Metros): '))
+imc = peso/altura**2
+print(f'Sua pontuação foi {imc:.2f}.', end=' ')
+if imc < 18.5:
+    print('Você está abaixo do peso')
+elif imc >= 18.5 and imc < 25:
+    print('Você está no Peso Ideal!')
+elif imc >= 25 and imc < 30:
+    print('Você está com sobrepeso.')
+elif imc >= 30 and imc <= 40:
+    print('Você esta com obesidade.')
+else:
+    print('Você esta com obesidade mórbida.')
 
 
 
