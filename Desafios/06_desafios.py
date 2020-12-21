@@ -138,7 +138,31 @@ else:
     print('Você esta com obesidade mórbida.')
 
 
+# Elabore um programa que calcule o valor a ser pago por um produto
+# considerando seu preço normal e condição de pagamento.
+# à vista dinheiro/cheque: 10% de desconto
+# à vista no cartão: 5% de desconto
+# em até 2x no cartão: preço normal
+# 3x ou mais no cartão: 20% de juros 
 
+print('\n','-=-' * 10) 
+print('\n Exercício 8\n')
+
+preco = float(input('Digite o preço do produto: R$'))
+print('\nDigite a opção de pagamento:\n[1]--À vista em dinheiro/cheque\n[2]--À vista no cartão\n[3]--Em até 2x no cartão\n[4]--Em 3x ou mais no cartão.')
+escolha = int(input('\nSua escolha: '))
+if escolha == 1:
+    preco = preco - (preco*0.1)
+    print(f'\nVocê ganha 10% de desconto neste método de pagamento, portanto o novo preço será R${preco:.2f}\n')
+elif escolha == 2:
+    preco = preco - (preco*0.05)
+    print(f'\nVocê ganha 5% de desconto neste método de pagamento, portanto o novo preço será R${preco:.2f}\n')
+elif escolha == 3:
+    print(f'\nO produto irá custar R${preco:.2f}, pagando duas parcelas de R${preco/2:.2f}\n')
+else:
+    parce = int(input('Em quantas vezes irá parcelar? '))
+    preco = preco*1.2
+    print(f'\nNeste método de pagamento haverá 20% de juros, portanto o novo preço será R${preco:.2f}\nCada parcela irá custar R${preco/parce:.2f}')
 
 
 
