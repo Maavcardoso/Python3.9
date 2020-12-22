@@ -150,3 +150,30 @@ for c2 in range (0,(len(anos))):
         print('\033[1;33m', anos[c2],end=' ')
         
 print(f'\n\033[1;32m{maior} dessas pessoas são maiores de idade.\n\033[1;33m{menor} dessas pessoas são menores de idade.')
+
+# Faça um programa que leia o peso de cinco pessoas. No final, mostre qual foi o maior e o menor peso lidos.
+print('\n','-=-' * 10) 
+print('\n Exercício 9\n')
+peso = []
+for c in range (0,5):
+    n = float(input(f'Digite o peso da {c+1}ª pessoa (Em Kg): '))
+    peso.insert(c, n) # Preenche a lista os valores lidos
+peso = sorted(peso) # Organiza os valores da lista em ordem crescente.
+print(f'O peso mais leve é {peso[0]}Kg\nO peso mais pesado é {peso[4]}Kg')
+# A maneira como eu consegui de resolver o exercício: manipulação de lista com for.
+# contudo, a maneira como o Guanabara resolveu não precisa de lista, apenas do algoritmo
+# certo.
+
+maior = 0
+menor = 0
+for c in range (0,5):
+     n = float(input(f'Digite o peso da {c+1}ª pessoa (Em Kg): '))
+     if c == 1:
+         menor = n # O primeiro peso sempre vai ser maior e menor, já que não há valor antes disso.
+         maior = n
+     else:
+         if n > maior: # Aqui o programa lê o próximo valor, se for maior ele substitui o valor da variavel 'maior'
+             maior = n
+         elif n < menor: # Caso seja menor, ele substitui o valor da variavel 'menor'
+             menor = n
+print(f'O peso mais leve é {menor}Kg\nO peso mais pesado é {maior}Kg')
