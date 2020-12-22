@@ -124,6 +124,9 @@ else:
 # Por mais espaços que tenha um frase, na hora de analisar não os considera (Como proposto no exercício),
 # Contudo, criei um segundo for que também transcreve de maneira correta.
 
+# Faça um programa que leia o ano de nascimento de 7 pessoas e diga quantas são menores e maiores de idade
+# considere a maior idade de 21 pra cima. 
+
 print('\n','-=-' * 10) 
 print('\n Exercício 9\n')
 from datetime import date
@@ -135,7 +138,7 @@ for c in range (0,7):
 maior = 0
 menor = 0
 for c2 in range (0,(len(anos))):
-    if x - anos[c2] > 18:
+    if x - anos[c2] > 21:
         maior = maior + 1
     else:
         menor = menor + 1
