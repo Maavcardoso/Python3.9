@@ -153,7 +153,7 @@ print(f'\n\033[1;32m{maior} dessas pessoas são maiores de idade.\n\033[1;33m{me
 
 # Faça um programa que leia o peso de cinco pessoas. No final, mostre qual foi o maior e o menor peso lidos.
 print('\n','-=-' * 10) 
-print('\n Exercício 9\n')
+print('\n Exercício 10\n')
 peso = []
 for c in range (0,5):
     n = float(input(f'Digite o peso da {c+1}ª pessoa (Em Kg): '))
