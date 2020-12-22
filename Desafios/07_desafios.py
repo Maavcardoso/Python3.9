@@ -123,3 +123,20 @@ else:
 # Implementei algumas melhoras:
 # Por mais espaços que tenha um frase, na hora de analisar não os considera (Como proposto no exercício),
 # Contudo, criei um segundo for que também transcreve de maneira correta.
+
+print('\n','-=-' * 10) 
+print('\n Exercício 9\n')
+from datetime import date
+anos = []
+x = date.today().year
+for c in range (0,7):
+    n = int(input(f'Digite o ano de nascimento da {c+1}ª pessoa: '))
+    anos.insert(c, n) # .insert() permite que insira dados dentro de uma lista. na relação insert(x,y), x é o parametro e y o dado.
+maior = 0
+menor = 0
+for c2 in range (0,(len(anos))):
+    if x - anos[c2] > 18:
+        maior = maior + 1
+    else:
+        menor = menor + 1
+print(f'\n{maior} dessas pessoas são maiores de idade.\n{menor} dessas pessoas são menores de idade.')
