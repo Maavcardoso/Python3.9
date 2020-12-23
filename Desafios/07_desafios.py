@@ -177,3 +177,26 @@ for c in range (0,5):
          elif n < menor: # Caso seja menor, ele substitui o valor da variavel 'menor'
              menor = n
 print(f'O peso mais leve é {menor}Kg\nO peso mais pesado é {maior}Kg')
+
+print('\n','-=-' * 10) 
+print('\n Exercício 11\n')
+mascv = 0 # guarda a idade do homem mais velho
+mascn = '' # guarda o nome do homem mais velho
+femid = 0 # guarda a quantidade de vezes aparece uma mulher com menos de 20 anos
+mediaid = 0 # guarda a soma das idades.
+for pess in range(0,4):
+    print(f'----- {pess+1}ª Pessoa -----') # Pede os dados pessoais
+    n = str(input('Nome: ')).strip().capitalize()
+    i = int(input('Idade: '))
+    s = str(input('Gênero [M/F/X]: ')).upper().strip()
+    mediaid = mediaid + i # Soma a idade com a média
+    if i > mascv and s == 'M': # altera o valor se um homem mais velho for colocado na lista
+        mascv = i
+        mascn = n
+    if s == 'F' and i < 20: # Acrescenta ao contador se a pessoa for mulher e tiver menos de 20 anos
+        femid = femid + 1
+mediaid = mediaid/4 # Média da idade
+print(f'\nA média de idade do grupo é de {mediaid} anos.')
+print(f'\nO homem mais velho tem {mascv} anos e se chama {mascn}.')
+print(f'\nAo todo são {femid} mulheres com menos de 20 anos.')
+
