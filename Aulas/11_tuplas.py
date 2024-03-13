@@ -31,6 +31,10 @@ print('Estou farto!')
 
 # Podemos enumerar os elementos conforme sua posição:
 
+for cont in range(0, len(lanche)):
+    print(f'Vou comer {lanche[cont]} na posição {cont}')
+print('Estou farto!') 
+
 for pos, comida in enumerate(lanche):
     print(f'Eu vou comer {comida} na posição {pos}')
 print('Chega, não aguento mais!')
@@ -47,4 +51,5 @@ print(c.count(2)) #Output: 2. Conta quantas vezes o elemento aparece na tupla
 # No Python, a tupla pode receber vários tipos de variável. Portanto, ela comporta tanto uma string quanto um valor inteiro ou float, por exemplo:
 
 pessoa = ('Mario', 23, 'M', 75,50)
+del (pessoa) # apaga a tupla do espaço de memória.
 print (pessoa)
