@@ -36,5 +36,44 @@ print(f'Times em ordem alfabética: {sorted(placar)}')
 print(40*'=-=')
 print(f'O Palmeiras está na {placar.index("Palmeiras")+1}ª posição')
 
+#Crie um programa que gere 5 números aleatórios e os coloque em uma
+#tupla. Mostre os números listados e indique o menor e o maior valor.
 
- 
+import random
+tupla_random = (random.randint(1,10),random.randint(1,10),random.randint(1,10),random.randint(1,10),random.randint(1,10))
+print("Os números sorteados foram: ",end="")
+for nums in tupla_random:
+    print(f" {nums}",end='')
+print(f"\nO menor número sorteado foi:{min(tupla_random)}")
+print(f"O maior número sorteado foi:{max(tupla_random)}")
+
+#Crie um programa que leia 4 valores e os insira em uma tupla. Após isso, deve:
+# A - Quantas vezes apareceu o número 9,
+# B - Em que posição foi digitado o primeiro valor 3,
+# C - Quais foram os números pares.
+
+
+
+tupla_num = (int(input("Digite o 1º valor: ")),
+             int(input("Digite o 2º valor: ")),
+             int(input("Digite o 3º valor: ")),
+             int(input("Digite o 4º valor: ")))
+print(f'Os números digitados foram: {tupla_num}')
+vezes9 = tupla_num.count(9)
+print(f"O número 9 apareceu {vezes9} vezes.")
+if 3 in tupla_num:
+    print(f"O número 3 foi digitado na {tupla_num.index(3)+1}ª Posição")
+else:
+    print("O valor 3 não foi digitado nenhuma vez.") 
+pares = 0
+for nums in tupla_num:
+    if nums % 2 == 0 and pares == 0:
+        print("Os números pares digitados foram: ",end="")
+        print(f"{nums}",end="")
+        pares = 1
+    elif nums % 2 == 0 and pares == 1:
+            print(f" {nums}", end="")
+    elif nums % 2 != 0:
+        pass
+if pares == 0:
+        print(f'Nenhum número par foi digitado')
