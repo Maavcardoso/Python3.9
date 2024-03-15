@@ -52,8 +52,6 @@ print(f"O maior número sorteado foi:{max(tupla_random)}")
 # B - Em que posição foi digitado o primeiro valor 3,
 # C - Quais foram os números pares.
 
-
-
 tupla_num = (int(input("Digite o 1º valor: ")),
              int(input("Digite o 2º valor: ")),
              int(input("Digite o 3º valor: ")),
@@ -77,3 +75,14 @@ for nums in tupla_num:
         pass
 if pares == 0:
         print(f'Nenhum número par foi digitado')
+
+# Crie um programa que imprima produtos e preços de uma tupla em formato de tabela.
+
+produtos = ("Leite", 4.25, "Amendoim", 16.66, "Chinelo", 170.25,"Kit Copo",1290.72,'Pó de mico', 69.99)
+print(30*'-')
+print('{:^30}'.format('Tabela de Preços'))
+print(30*'-')
+for i in range(0,len(produtos),2):
+    print('{:.<20}'.format(produtos[i]),end='')
+    print('R${:>8}'.format(produtos[i+1]))
+print(30*'-')
