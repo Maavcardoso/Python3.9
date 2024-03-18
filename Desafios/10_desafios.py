@@ -90,3 +90,12 @@ print(30*'-')
 # Crie um programa que contenha uma tupla com várias palavras. O programa deve
 # mostrar todas as vogais de cada palavra.
 
+palavras=("Aprender","Rolar","Palhaço","Fazueli","Cocada","Hipopotamo","Barterapia")
+vogais = ("A","E","I","O","U") 
+for palavra in palavras:
+    palavra = palavra.upper()
+    x = list(palavra)
+    print(f"\nA palavra {palavra} possui as vogais: ",end="")
+    for letra in x:
+        if letra in vogais:
+            print(f'{letra} ',end="")
