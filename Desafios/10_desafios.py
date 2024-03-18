@@ -86,3 +86,7 @@ for i in range(0,len(produtos),2):
     print('{:.<20}'.format(produtos[i]),end='')
     print('R${:>8}'.format(produtos[i+1]))
 print(30*'-')
+
+# Crie um programa que contenha uma tupla com várias palavras. O programa deve
+# mostrar todas as vogais de cada palavra.
+
