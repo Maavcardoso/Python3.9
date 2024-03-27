@@ -17,3 +17,42 @@ for i in range(0,len(maiorc)):
 print(f'\nO menor número foi {min(list_num)} nas posições:',end="")
 for i in range(0,len(menorc)):
     print(f' {menorc[i]}',end="")
+
+#Crie um programa onde o usuário possa digitar vários valores numéricos e cadastre-os em uma lista.
+#Caso o número já exista, ele não será adicionado. No final, exiba todos os valores únicos digitados
+#Em ordem crescente.
+
+list_uni = []
+while True:
+    num = int(input("Digite um número: "))
+
+    if num not in list_uni:
+        list_uni.append(num)
+
+    else:  
+        print("Número duplicado, não será adicionado.")
+
+    choice = input("Deseja continuar? S/N: ").strip()[0].upper()
+    if choice == "N":
+        break
+
+print(f"Os números inseridos foram: {sorted(list_uni)}")
+
+#Crie um programa onde o usuário possa digitar cinco valores numéricos
+#e cadastre-os em uma lista, já na posição correta de inserção (Sem usar sort()).
+#Ao final, mostre a lista ordenada na tela.
+
+list_ord = []
+for i in range (0,5):
+    num_ord = (int(input("Digite um número: ")))
+    if not list_ord or num_ord > list_ord[len(list_ord)-1]:
+        list_ord.append(num_ord)
+        print("Valor inserido na última posição.")  
+    else:
+        for c, v in enumerate(list_ord):
+            if num_ord < list_ord[c]:
+                list_ord.insert(c,num_ord)
+                print(f"Valor inserido na posição {c}.")
+                break # Precisei adicionar pois o contador (c) é incrementado no momento em que adiciona o novo valor,
+                      # Criando assim um loop infinito.
+print(f"A lista ordenada é: {list_ord}")
