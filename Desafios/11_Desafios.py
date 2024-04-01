@@ -56,3 +56,24 @@ for i in range (0,5):
                 break # Precisei adicionar pois o contador (c) é incrementado no momento em que adiciona o novo valor,
                       # Criando assim um loop infinito.
 print(f"A lista ordenada é: {list_ord}")
+
+# Crie um programa que vai ler vários números e colocar em uma lista.
+# Depois disso mostre: 
+# A) Quantos números foram digitados;
+# B) A lista de valores, ordenada de forma decrescente;
+# C) Se o valor 5 foi ou não digitado na lista.
+
+listin = []
+while(True):
+    num_listin = int(input("Digite um número: "))
+    listin.append(num_listin)
+    choice = input("Deseja inserir outro número? S/N: ").upper().strip()[0]
+    if choice == "N":
+        break
+listin.sort(reverse=True)
+print(f"A - Foram digitados {len(listin)} números")
+print(f"B - A lista com valores decrescentes: {listin}")
+if 5 in listin:
+    print("C - O número 5 existe na lista!")
+else:
+    print("C - O número 5 não existe na lista.")
