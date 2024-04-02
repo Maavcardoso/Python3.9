@@ -77,3 +77,21 @@ if 5 in listin:
     print("C - O número 5 existe na lista!")
 else:
     print("C - O número 5 não existe na lista.")
+# anotar desafio.
+lista_cpt = []
+pares = []
+impares = []
+
+while(True):
+    num = int(input("Digite um número: "))
+    lista_cpt.append(num)
+    if num % 2 == 0:
+        pares.append(num)
+    else:
+        impares.append(num)
+    choice = input("Deseja continuar? S/N: ").upper().strip()[0]
+    if choice == "N":
+        break
+print(f"Lista completa: {lista_cpt}")
+print(f"Valores pares: {pares}")
+print(f"Valores impares: {impares}")
