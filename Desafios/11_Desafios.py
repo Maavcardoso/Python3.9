@@ -95,3 +95,18 @@ while(True):
 print(f"Lista completa: {lista_cpt}")
 print(f"Valores pares: {pares}")
 print(f"Valores impares: {impares}")
+
+
+# Desafio 
+
+exp = input("Digite a expressão: ",end="")
+list(exp)
+for i in exp:
+    if exp[c] == "(":
+        abertura = 0
+        fechamento = 0
+        for j in range(exp[c],len(exp)-1):
+            if j == "(":
+                abertura += 1
+                print(abertura)
+            elif j 
