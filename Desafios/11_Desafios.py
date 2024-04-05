@@ -99,14 +99,17 @@ print(f"Valores impares: {impares}")
 
 # Desafio 
 
-exp = input("Digite a expressão: ",end="")
-list(exp)
-for i in exp:
-    if exp[c] == "(":
-        abertura = 0
-        fechamento = 0
-        for j in range(exp[c],len(exp)-1):
-            if j == "(":
-                abertura += 1
-                print(abertura)
-            elif j 
+exp = input("Digite a expressão: ")
+exp =list(exp)
+if exp.count("(") == exp.count(")") and exp.count("(") != 0:
+    for c, i in enumerate(exp):
+        if i == "(":
+            exp.pop(c)
+            for j in range(c,len(exp)):
+                if exp[j] == ")":
+                    exp.pop(j)
+                    break
+if exp.count("(") == 0 and exp.count(")") == 0:
+    print("Expressão Válida")
+else:
+    print("Expressão inválida...")
