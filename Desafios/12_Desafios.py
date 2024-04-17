@@ -57,3 +57,33 @@ for i in range(0,3):
     for j in range (0,3):
         print(f"[{matriz[i][j]:^4}]",end="") # formata corretamente até 9999
     print()
+
+# Add comentario
+
+matriz = [[],[],[]]
+pares = terc = mai = 0
+# Preenche a matriz com valores
+for i in range(0,3):
+    for j in range (0,3):
+        num = int(input(f"Insira um número na posição [{i},{j}]"))
+        matriz[i].append(num)
+        
+        # Soma todos os valores pares digitados
+        if num % 2 == 0:
+            pares += num
+        # Soma os valores da terceira coluna    
+        if j == 2:
+            terc += num
+        # Seleciona o maior valor da segunda linha
+        if i == 1 and num > mai:
+            mai = num
+
+# Imprime a Matriz
+for i in range(0,3):
+    for j in range (0,3):
+        print(f"[{matriz[i][j]:^5}]",end="")
+    print()
+print(f"\nA- A soma de todos os valores pares é {pares}")
+print(f"B- A soma dos valores da terceira coluna é: {terc}")
+print(f"C- O maior da segunda linha é {mai}")
+    
