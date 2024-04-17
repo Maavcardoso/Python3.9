@@ -43,3 +43,17 @@ for i in range(0,7):
         nums[1].append(num)
 print(f"Lista de números pares: {sorted(nums[0])}")
 print(f"Lista de números impares: {sorted(nums[1])}")
+
+# Crie um programa que crie uma matriz de dimensão 3x3 e preencha com 
+# valores lidos pelo teclado. No final, moestre a matriz na tela, com a 
+# formatação correta.
+
+matriz = [[],[],[]]
+for i in range(0,3):
+    for j in range (0,3):
+        num = int(input(f"Insira um número na posição [{i}][{j}]"))
+        matriz[i].append(num)
+for i in range(0,3):
+    for j in range (0,3):
+        print(f"[{matriz[i][j]:^4}]",end="") # formata corretamente até 9999
+    print()
