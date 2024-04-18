@@ -86,4 +86,25 @@ for i in range(0,3):
 print(f"\nA- A soma de todos os valores pares é {pares}")
 print(f"B- A soma dos valores da terceira coluna é: {terc}")
 print(f"C- O maior da segunda linha é {mai}")
-    
+
+# Faça um program que crie palpites da MEGA SENA para o usuário. O programa
+# deve perguntar quantos jogos serão gerados e então sortear 6 números de 
+# 1 a 60 para cada jogo, cadastrando tudo em uma lista composta.
+
+import random
+import time
+palpite = int(input("Quantos palpites devo gerar?"))
+jogos = []
+for i in range(0,palpite):
+    jogos.append([])
+    for j in range(0,6):
+        num = random.randint(1,60)
+        while num in jogos[i]: # Evita que o mesmo número seja sorteado 2 vezes
+            num = random.randint(1,60)
+        jogos[i].append(num)
+print("SORTEANDO JOGOS")
+for i in range (0,len(jogos)):
+    time.sleep(1)
+    print(f"JOGO {i + 1}: {jogos[i]}")
+   
+
