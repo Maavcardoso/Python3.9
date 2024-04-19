@@ -58,7 +58,8 @@ for i in range(0,3):
         print(f"[{matriz[i][j]:^4}]",end="") # formata corretamente até 9999
     print()
 
-# Add comentario
+# Aprimore o programa acima e traga os seguintes resultados:
+# A - 
 
 matriz = [[],[],[]]
 pares = terc = mai = 0
@@ -107,4 +108,54 @@ for i in range (0,len(jogos)):
     time.sleep(1)
     print(f"JOGO {i + 1}: {jogos[i]}")
    
+# Anotar aqui
 
+alunos = []
+dado = list()
+
+# Preenchendo linhas (Cada Variável é uma coluna, formando assim uma tabela).
+
+while (True):
+    nome = str(input("Nome: "))
+    dado.append(nome)
+    notas = []
+
+    # Criar uma lista para armazenar ambas as notas em apenas uma variável.
+    for i in range(0,2):
+        nota = float(input(f"Nota {i+1} : "))
+        notas.append(nota)
+    dado.append(notas)
+
+    # Calcular média
+    media = (notas[0] + notas[1]) / 2
+    media = float("{:.1f}".format(media))
+    dado.append(media)
+    alunos.append(dado[:])
+
+    # Limpa dados e interrompe loop
+    dado.clear()
+    choice = str(input("Quer continuar? [S/N] ")).upper().split()[0]
+    if choice == "N":
+        break
+
+print("-="*30)
+
+# Imprime a tabela
+
+print('{:<4}{:19}{:<7}'.format("No.","NOME","MÉDIA"))
+print(30*'-')
+for i in range(0,len(alunos)):
+    print('{:<4}{:19}{:^7}'.format(i,alunos[i][0],alunos[i][2]))
+while(True):
+    print(40*'-')
+
+# Mostra ambas as notas do aluno escolhido
+
+    id_aluno = int(input("Mostrar notas de qual aluno? (999 interrompe): "))
+    if id_aluno != 999 and id_aluno < len(alunos):
+        print(f"Notas de {alunos[id_aluno][0]} são {alunos[id_aluno][1]}")
+    elif id_aluno == 999:
+       break
+    else:
+         print(f"Número inválido. Insira um número até {len(alunos)-1}")
+print(f"FINALIZANDO...\n<<< VOLTE SEMPRE >>>")
