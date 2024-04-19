@@ -59,7 +59,9 @@ for i in range(0,3):
     print()
 
 # Aprimore o programa acima e traga os seguintes resultados:
-# A - 
+# A - A soma de todos os valores pares,
+# B - A soma dos valores da terceira coluna,
+# C - O maior número da segunda linha.
 
 matriz = [[],[],[]]
 pares = terc = mai = 0
@@ -86,7 +88,7 @@ for i in range(0,3):
     print()
 print(f"\nA- A soma de todos os valores pares é {pares}")
 print(f"B- A soma dos valores da terceira coluna é: {terc}")
-print(f"C- O maior da segunda linha é {mai}")
+print(f"C- O maior número da segunda linha é {mai}")
 
 # Faça um program que crie palpites da MEGA SENA para o usuário. O programa
 # deve perguntar quantos jogos serão gerados e então sortear 6 números de 
