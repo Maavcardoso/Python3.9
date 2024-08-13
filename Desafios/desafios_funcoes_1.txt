@@ -1,0 +1,133 @@
+# Faça um programa que tenha uma função chamada área(),que
+# receba as dimensões de um terreno retangular (largura e comprimento)
+# e mostre a área do terreno.
+
+def area (largura,comprimento):
+    print(f'A área de um terreno {largura}x{comprimento} é de {largura*comprimento}m²')
+
+print('Controle de Terrenos')
+print('-=' * 20)
+largura = float(input('Digite a Largura em metros: '))
+comprimento = float(input('Digite o comprimento em metros: '))
+area(largura,comprimento)
+
+
+# Faça um programa que tenha uma função chamado escreva(),
+# que receba um texto qualquer como parametro 
+# e mostre uma mensagem com tamanho adaptável.
+
+def escreve(msg):
+    tam = len(msg)+4
+    print('~'*tam)
+    print('{:^{tam}}'.format(msg,tam=tam))
+    print('~'*tam)
+    
+escreve("Hello World!")    
+escreve('Notas Finais')
+escreve('Porco Narigudo')
+escreve("Jojo's Bizarre Adventures")
+
+
+# Faça um programa que tenha uma função chamada contador(),
+# Que recebe três parâmetros: início, fim e passo.
+# Seu programa tem que realizar três contagens através da função criada.
+
+import time
+def contador(ini,fim,passo):
+    if (passo == 0):
+        passo = 1
+    print(f'Contagem de {ini} até {fim} de {passo} em {passo}:')
+    if (fim > ini):
+        if passo < 0:
+            passo = -passo
+        for i in range(ini,fim+passo,passo):
+            if i > fim:
+                break
+            time.sleep(1)
+            print(i,end=' ')
+        time.sleep(1)
+        print("Fim!")
+    elif (ini > fim or passo < 0):
+        if (passo > 0):
+            passo = -passo
+        for i in range(ini, fim+passo, passo):
+            if i < fim:
+                break
+            time.sleep(1)
+            print(i,end=' ')
+        time.sleep(1)
+        print('Fim!')
+    print('~'*30)
+            
+        
+#contador(0,10,1)
+#contador(10,0,2)
+
+print("Agora é sua vez de personalizar a contagem!")
+inicio = int(input("Início: "))
+final = int(input("Fim: "))
+passos = int(input("Passo: "))
+
+contador(inicio,final,passos)
+
+# Faça um programa que tenha uma função chamada maior(), que receba vários
+# parâmetros com valores inteiros. Seu programa tem que analisar todos os
+# valores e dizer qual deles é o maior.
+
+import time
+def maior(*num):
+    tam = len(num)
+    maior = 0
+    print('Analisando os valores passados: ')
+    for n in num:
+        time.sleep(0.5)
+        print(n,end=' ')
+        if n > maior:
+            maior = n
+    print(f'Foram informados {tam} valores ao todo ')
+    print(f'O maior valor informado foi {maior}')
+    print('~'*60)
+    
+maior(4,7,0)
+maior(2,9,4,5,7,1)
+maior()
+   
+# Faça um programa que tenha uma lsita chamada números e duas funções
+# chamadas sorteia() e somaPar(). A primeira função vai sortear 5 números
+# e vai colocá-los dentro da lista e a segunda função vai mostrar a soma 
+# entre todos os valores PARES sorteados pela função anterior.
+
+import random
+import time
+
+def sorteia(lista):
+    c = 0
+    print('Sorteando 5 valores da lista: ',end='')
+    while c < 5:
+        randNum = random.randint(1,10)
+        lista.append(randNum)
+        time.sleep(0.5)
+        print(randNum, end=' ')
+        c += 1
+    print('Pronto!')
+    
+def somaPar(lista):
+    totalPar = 0
+    print(f'Na lista {lista}, os valores pares são ',end='')
+    for num in lista:
+        if num % 2 == 0:
+            print(num, end=' ')
+            totalPar += num
+    print (f'e os somando, temos {totalPar}')
+    
+    
+valores = []
+sorteia(valores)
+somaPar(valores)
+
+
+
+
+
+
+

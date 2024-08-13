@@ -1,0 +1,40 @@
+pessoas = []
+while(True):
+    pessoa = {}
+    pessoa['nome'] = str(input('Nome: '))
+    pessoa['sexo'] = str(input('Sexo [M/F]: ')).upper().strip()[0]
+    while (pessoa['sexo'] != 'M' and pessoa['sexo'] != 'F' ):
+        pessoa['sexo'] = str(input("Sexo inválido. Insira novamente [M/F]: ")).upper().strip()[0]
+    pessoa['idade'] = float(input("Idade: "))
+    pessoas.append(pessoa.copy())
+    choice = str(input('Deseja Continuar? [S/N]: ')).upper().strip()[0]
+    while (True):
+        if choice in 'SN':
+            break
+        choice = str(input('Opção inválida. Digite S ou N: ')).upper().strip()[0]
+    if choice == 'N':
+        break
+print('=-=' * 20)
+print(f'- O grupo possui {len(pessoas)} pessoas.')
+media = 0 
+mulheres = []
+for i in pessoas:
+    media = media + i['idade']
+    if (i['sexo'] == 'F'):
+        mulheres.append(i['nome'])
+media = media / len(pessoas)
+print(f'- A média de idade é de {media:,.2f} anos.')
+print(f'- As mulheres cadastradas foram: ',end="")
+for m in mulheres:
+    print(f'{m}',end=" ")
+acima_media = []
+for p in pessoas:
+    if (p['idade'] >= media):
+        acima_media.append(p.copy())
+print('\n- Lista de pessoas que estão acima da média: ')
+for p in acima_media:
+    for k,v in p.items():
+        if k == 'nome':
+            print(f'\n{k} = {v}',end='; ')
+        else:
+            print(f'{k} = {v}',end='; ')

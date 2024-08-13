@@ -1,0 +1,159 @@
+#
+
+def voto(anoNascimento):
+    import datetime
+    global idade
+    idade = datetime.datetime.now().year - anoNascimento
+    if idade < 16:
+        return "NEGADO"
+    elif 16 <= idade < 18 or idade >= 70:
+        return "OPCIONAL"
+    else:
+        return "OBRIGATÓRIO"
+
+#
+
+def fatorial(num,show=False):
+    """
+    -> Calcula o Fatorial de um número.
+    :param n: O número a ser calculado.
+    :param show: (opcional) mostra ou não a conta realizada
+    :return: O valor fatorial de um número num
+    """
+    fat = 1
+    if num == 0 and show == True:
+                print(f'O Fatorial de 0 é',end=' ')
+    for i in range (num,0,-1):
+        fat *= i
+        if show == True:
+            if i == 1:
+                print(i,end=' = ')
+            else:    
+                print(i,end=' x ')
+            
+    return print(fat)
+    
+fatorial(6,show=True)
+help(fatorial)
+
+# 
+
+def ficha(nome,gols):
+    if not nome:
+        nome = "<desconhecido>"
+    if gols.isnumeric():
+         gols = int(gols)
+    else:
+        gols = 0
+    return f'O jogador {nome} marcou {gols} gol(s) no campeonato.'
+
+nomeJogador = str(input("Jogador: "))
+numGols = str(input("Número de Gols: "))
+print(ficha(nomeJogador,numGols))
+
+#
+
+def leiaInt(msg):
+    print(f'{msg}')
+    num = input(str())
+    if num.isnumeric():
+        return num
+    else:
+        while not num.isnumeric():
+            num = input(str("Erro! Digite um número inteiro válido."))
+            if num.isnumeric():
+                return num
+
+
+n = leiaInt("Digite um número: ")
+print(f'Você acabou de digitar o número {n}')
+
+#
+
+def notas (*notas,sit=False):
+    """
+    -> Função para analisar notas e situaçãoes de vários alunos.
+    :param notas: uma ou mais notas dos alunos (aceita várias)
+    :param sit: valor opcional, indicando se deve ou não adicionar a situação
+    :return: dicionário com várias informações sobre a situação da turma
+    """
+    turma = {}
+    qtd_notas = 0
+    maior = 0
+    menor = notas[0]
+    media = 0
+    for nota in notas:
+        if nota > maior:
+            maior = nota
+        if nota < menor: 
+            menor = nota
+        media += nota
+        qtd_notas += 1
+    media = media/qtd_notas
+    turma["total"] = qtd_notas    
+    turma["maior"] = maior
+    turma["menor"] = menor
+    turma["media"] = media
+    if sit == True:
+        if media >= 7:
+            turma['situação'] = "BOA"
+        elif 5 <= media < 7:
+            turma['situação'] = "RAZOAVEL"
+        else:
+            turma['situação'] = "RUIM"
+    return turma
+
+resp = notas(3.5,2,6.5,2,7,4,sit=True)
+print(resp)
+help(notas)
+
+# Solução proposta pelo Guanabara, com funções de lista que tornam o programa mais curto 
+# e legível.
+
+def notas (*notas,sit=False):
+    """
+    -> Função para analisar notas e situaçãoes de vários alunos.
+    :param notas: uma ou mais notas dos alunos (aceita várias)
+    :param sit: valor opcional, indicando se deve ou não adicionar a situação
+    :return: dicionário com várias informações sobre a situação da turma
+    
+    """
+    turma = {}
+    turma["total"] = len(notas) # len() retorna a quantidade de items da lista   
+    turma["maior"] = max(notas) # max() retorna o maior valor da lista
+    turma["menor"] = min(notas) # min() retorna o menor valor da lista
+    turma["media"] = sum(notas)/len(notas) # sum() retorna a soma de todos os itens da lista
+    if sit:
+        if turma["media"] >= 7:
+            turma['situação'] = "BOA"
+        elif 5 <= turma["media"] < 7:
+            turma['situação'] = "RAZOAVEL"
+        else:
+            turma['situação'] = "RUIM"
+    return turma
+
+resp = notas(5.5,2.5,1.5,sit=True)
+print(resp)
+help(notas)
+    
+import time
+def titulo(msg):
+    print('~' * (len(msg)+4))
+    print(f'  {msg}')
+    print('~' * (len(msg)+4))
+    
+#
+   
+titulo('SISTEMA DE AJUDA PyHELP')
+
+while(True):
+    time.sleep(1)
+    funcName = str(input('Função ou Biblioteca > ')).lower().strip()
+    if funcName == 'fim':
+        break
+    else:
+        titulo(f"Acessando o manual do comando '{funcName}'")
+        time.sleep(1)
+        help(funcName)
+titulo('ATÉ LOGO!')
+    
