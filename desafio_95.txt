@@ -1,0 +1,41 @@
+jogadores = []
+while True:
+    jogador = {}
+    jogador['nome'] = str(input("Nome do Jogador: "))
+    jogador['gols'] = []
+    jogador['total'] = 0
+    partidas = int(input(f"Quantas partidas {jogador['nome']} jogou? "))
+    for g in range(1,(partidas + 1)):
+        gol = int(input(f'Quantos gols na partida {g}? '))
+        jogador['gols'].append(gol)
+        jogador['total'] += gol
+    jogadores.append(jogador.copy())
+    escolha = str(input("Deseja Continuar? [S/N]")).upper().strip()[0]
+    while escolha not in 'SN':
+        escolha = str(input("Opção inválida. Digita S ou N: ")).upper().strip()[0]
+    if escolha == 'N':
+        break
+print('-='*40)
+print("{:<4}{:<12}{:<20}{:<6}".format("cod","nome","gols","total"))
+print('-'*45)
+for k,v in enumerate(jogadores):
+    print("{:>3} {:<12}{:<20}{:<6}".format(k,v['nome'],str(v['gols']),v['total']))
+playerNum = 0
+while playerNum != 999:
+    print('-'*45)
+    playerNum = int(input("Mostrar dados de qual jogador? (999 para parar): "))
+    if playerNum == 999:
+        print('<<< VOLTE SEMPRE >>>')
+        break
+    if playerNum >= len(jogadores) or playerNum < 0:
+        print('-'*45)
+        print(f'ERRO! NÃO EXISTE JOGADOR COM CÓDIGO {playerNum}')
+    else:
+        j = jogadores[playerNum]
+        print('-'*45)
+        print(f' -- LEVANTAMENTO DO JOGADOR {j["nome"]}:')
+        for k,v in enumerate(j['gols']):
+            print(f'    No jogo {k+1} fez {v} gols')
+        
+    
+        
